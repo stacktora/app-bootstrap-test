@@ -1,0 +1,13 @@
+name: Stacktora audit
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: stacktora/audit-action@v1
+        with:
+          stacktora-token: ${{ secrets.STACKTORA_TOKEN }}
