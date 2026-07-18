@@ -1,0 +1,69 @@
+{
+  "$schema": "https://stacktora.com/schema/stacktora.schema.json",
+  "stacktora": 1,
+  "generatedAt": "2026-07-18",
+  "stack": {
+    "runtime": "ruby",
+    "version": "3.3",
+    "datastores": [
+      "postgres",
+      "redis"
+    ],
+    "services": [],
+    "tools": {
+      "packageManager": "bundler",
+      "linter": "rubocop",
+      "formatter": "rubocop"
+    },
+    "config": {
+      "appName": "app",
+      "appPort": 3000,
+      "hotReload": true,
+      "seed": true,
+      "healthGate": true,
+      "worker": true,
+      "env": [
+        {
+          "key": "RAILS_ENV",
+          "value": "development"
+        },
+        {
+          "key": "RACK_ENV",
+          "value": "development"
+        }
+      ],
+      "outputs": {
+        "dockerfile": true,
+        "k8s": false,
+        "editorconfig": true,
+        "precommit": true,
+        "taskfile": false,
+        "envrc": false,
+        "gitpod": false,
+        "devcontainer": false,
+        "aliases": false,
+        "vercel": true,
+        "supabase": false
+      },
+      "svc": {
+        "postgres": {
+          "version": "18",
+          "port": 5432
+        },
+        "redis": {
+          "version": "8",
+          "port": 6379
+        }
+      },
+      "web": {
+        "enabled": false,
+        "framework": "vite-react",
+        "port": 5173
+      },
+      "mobile": {
+        "enabled": false,
+        "framework": "expo"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# .dockerignore — keep build context small & secrets out of images
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+README.md
+.github/
+Dockerfile
+docker-compose.yml
+*.log
+vendor/bundle
+tmp
+log
