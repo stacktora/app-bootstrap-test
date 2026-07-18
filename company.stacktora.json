@@ -1,0 +1,6 @@
+{
+  "company": "Stacktora Test Co",
+  "policy": {
+    "bannedDatastores": ["mongo"]
+  }
+}
